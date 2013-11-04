@@ -2,12 +2,12 @@ var MathProxy = Math;
 
 MathProxy.deg2rad = function( degrees )
 {
-	return degrees * .017453292519943295; // (degrees / 180) * Math.PI;
+    return degrees * .017453292519943295; // (degrees / 180) * Math.PI;
 };
 
 MathProxy.rad2deg = function ( radians )
 {
-	return radians * 57.29577951308232; // (radians / 180) * Math.PI;
+    return radians * 57.29577951308232; // (radians / 180) * Math.PI;
 };
 
 MathProxy.intersects = function ( x, y, rect )
@@ -17,9 +17,9 @@ MathProxy.intersects = function ( x, y, rect )
 
 MathProxy.lerp = function( a, b, f )
 {
-	a = Math.ensureFloat( a );
-	b = Math.ensureFloat( b );
-	f = Math.ensureFloat( f );
+    a = Math.ensureFloat( a );
+    b = Math.ensureFloat( b );
+    f = Math.ensureFloat( f );
     return Math.ensureFloat( (1 - f) * a + f * b );
 };
 

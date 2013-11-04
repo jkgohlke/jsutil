@@ -2,22 +2,22 @@ if( !Array.prototype.indexOf )
 {
     Array.prototype.indexOf = function ( elt /*, from*/ )
     {
-      var len = this.length >>> 0;
+        var len = this.length >>> 0;
 
-      var from = Number( arguments[1] ) || 0;
-      from = (from < 0)
-          ? Math.ceil( from )
-          : Math.floor( from );
-      if( from < 0 )
-        from += len;
+        var from = Number( arguments[1] ) || 0;
+        from = (from < 0)
+             ? Math.ceil( from )
+             : Math.floor( from );
+        if( from < 0 )
+            from += len;
 
-      for( ; from < len; from++ )
-      {
-        if( from in this &&
-            this[from] === elt )
-          return from;
-      }
-      return -1;
+        for( ; from < len; from++ )
+        {
+            if( from in this &&
+                this[from] === elt )
+            return from;
+        }
+        return -1;
     };
 }
 
@@ -25,10 +25,10 @@ if( !Array.prototype.deleteAll )
 {
     Array.prototype.deleteAll = function ( value )
     {
-      var index;
-      while ( (index = this.indexOf( value )) !== -1) {
-        this.splice(index, 1);
-      }
+        var index;
+        while ( (index = this.indexOf( value )) !== -1) {
+            this.splice(index, 1);
+        }
     };
 }
 
@@ -36,10 +36,10 @@ if( !Array.prototype.deleteFirst )
 {
     Array.prototype.deleteFirst = function ( value )
     {
-      var index = this.indexOf( value );
-      if (index !== -1) {
-        this.splice(index, 1);
-      }
+        var index = this.indexOf( value );
+        if (index !== -1) {
+            this.splice(index, 1);
+        }
     };
 }
 
